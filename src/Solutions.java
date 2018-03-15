@@ -1,5 +1,5 @@
 import Chapter3.Node;
-import Chapter3.PosOrderUnRecur;
+import Test.Sort.QuickSort;
 
 /**
  * Created by NY on 2017/11/15.
@@ -34,8 +34,49 @@ public class Solutions {
 //        InOrderUnRecur temp = new InOrderUnRecur();
 //        temp1.InOrderUnRecur(n1);
 //        temp.inOrderUnRecur(n1);
-        PosOrderUnRecur p = new PosOrderUnRecur();
-        p.postOderUnRecur(n1);
+        Solutions s = new Solutions();
+        int[] arr = s.creatArray(5);
+        s.printArray(arr);
+        new QuickSort().quickSort(arr,0,arr.length-1);
+        s.printArray(arr);
+    }
 
+    public int[] creatArray(int length){
+        int[] arr = new int[length];
+        for(int i=0;i<length;i++){
+            arr[i] = length-i;
+        }
+        return arr;
+    }
+
+    public void printArray(int[] arr){
+        for(int i:arr){
+            System.out.print(i+" ");
+        }
+        System.out.println("");
+    }
+
+
+    public int[][] creat2DArray(int row,int col){
+        int[][] resArr = new int[row][col];
+        int val = 1;
+        for(int i = 0;i<row;i++){
+            for(int j=0;j<col;j++){
+                resArr[i][j] = val++;
+            }
+        }
+        return resArr;
+    }
+
+    public void printMatrix(int[][] arr){
+        int col = arr.length;
+        int row = arr[0].length;
+        int count = 0;
+        for(int i = 0;i<row;i++){
+            for(int j=0;j<col;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
