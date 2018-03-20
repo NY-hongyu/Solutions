@@ -14,7 +14,6 @@ public class HeapSort {
             arr[0] = temp;
             adustDownToTop(arr,0,i);
             System.out.println(Arrays.toString(arr));
-
         }
     }
 

@@ -28,7 +28,8 @@ public class MergeSort {
             arrTemp[k++] = arr[i++];
         }
         while (j<=last){
-            arrTemp[k++] = arr[j++];
+            arrTemp[k++] = arr[j
+                    ++];
         }
         for(int k1 = 0;k1<arrTemp.length;k1++){
             arr[first+k1] = arrTemp[k1];
